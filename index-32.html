@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Product Information Agent | OrionPulse AI Workforce</title>
+<meta name="description" content="AI Product Information Agent by OrionPulse — an intelligent product knowledge and frontline support worker that turns product questions into accurate answers, qualified opportunities and business intelligence.">
+<link rel="canonical" href="https://orionpulse.co.in/ai-product-information-agent/">
+<meta property="og:title" content="AI Product Information Agent | OrionPulse">
+<meta property="og:description" content="Turn product questions into accurate answers, qualified opportunities and actionable customer intelligence.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://orionpulse.co.in/ai-product-information-agent/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#032D60">
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"SoftwareApplication",
+ "name":"OrionPulse AI Product Information Agent",
+ "applicationCategory":"BusinessApplication",
+ "description":"AI-powered product information, knowledge and frontline support agent for growing businesses.",
+ "brand":{"@type":"Brand","name":"OrionPulse"},
+ "offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}
+}
+</script>
+<style>
+:root{
+  --navy:#032d60;--blue:#0176d3;--sky:#0b8cff;--ink:#181818;--muted:#5f6b7a;
+  --line:#d8dde6;--bg:#f3f6f9;--card:#fff;--soft:#eef4fb;--green:#2e844a;
+  --amber:#ba7a03;--red:#ba0517;--radius:10px;--shadow:0 2px 8px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid #78baf3;outline-offset:2px}
+.topbar{height:58px;background:var(--navy);color:#fff;display:flex;align-items:center;padding:0 20px;gap:18px;position:sticky;top:0;z-index:50}
+.logo{font-weight:800;letter-spacing:-.5px;font-size:19px;display:flex;align-items:center;gap:9px}
+.logoMark{width:27px;height:27px;border-radius:7px;background:#0b8cff;display:grid;place-items:center;font-weight:900}
+.global-search{flex:1;max-width:560px;position:relative}
+.global-search input{width:100%;background:#fff;color:#172033;border:0;border-radius:7px;padding:10px 14px 10px 39px}
+.searchIcon{position:absolute;left:13px;top:9px;color:#617083}
+.top-actions{display:flex;gap:8px;align-items:center;margin-left:auto}
+.icon-btn,.nav-btn{border:0;background:transparent;color:#fff;padding:8px 10px;border-radius:6px}
+.icon-btn:hover,.nav-btn:hover{background:rgba(255,255,255,.12)}
+.shell{display:grid;grid-template-columns:245px minmax(0,1fr);min-height:calc(100vh - 58px)}
+.sidebar{background:#fff;border-right:1px solid var(--line);padding:16px 10px;position:sticky;top:58px;height:calc(100vh - 58px);overflow:auto}
+.side-title{font-size:11px;font-weight:800;color:#6b7785;text-transform:uppercase;letter-spacing:.1em;padding:10px 12px}
+.side-link{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:6px;color:#283548;margin:2px 0}
+.side-link:hover{background:#eef4fb}.side-link.active{background:#e5f1fb;color:#032d60;font-weight:700;border-left:3px solid var(--blue);padding-left:9px}
+.side-icon{width:20px;text-align:center}
+.content{min-width:0}
+.breadcrumb{padding:12px 28px;background:#fff;border-bottom:1px solid var(--line);color:#6b7785;font-size:12px}
+.page{max-width:1500px;margin:auto;padding:22px 28px 70px}
+.hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(330px,.65fr);gap:18px;align-items:stretch}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.hero-main{padding:32px}
+.eyebrow{font-size:11px;color:var(--blue);font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+h1{font-size:38px;line-height:1.08;letter-spacing:-1.2px;margin:9px 0 12px;color:var(--navy)}
+h2{font-size:24px;line-height:1.2;margin:0 0 9px;color:var(--navy)}
+h3{margin:0 0 7px;color:#172033}
+.hero-copy{font-size:17px;color:#4f5b6b;max-width:760px}
+.pills{display:flex;flex-wrap:wrap;gap:7px;margin:17px 0}
+.pill{padding:5px 9px;border-radius:999px;background:#eef4fb;border:1px solid #d5e6f7;color:#174d78;font-size:12px;font-weight:700}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.primary,.secondary,.danger{border-radius:6px;padding:10px 17px;font-weight:750;border:1px solid transparent}
+.primary{background:var(--blue);color:#fff}.primary:hover{background:#0b5cab}
+.secondary{background:#fff;border-color:#b8c4d2;color:var(--navy)}.secondary:hover{background:#f5f8fb}
+.hero-console{padding:22px;background:linear-gradient(180deg,#fff,#f8fbfe)}
+.status-row{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:12px}
+.status{display:inline-flex;align-items:center;gap:7px;font-weight:750;color:var(--green)}
+.dot{width:8px;height:8px;border-radius:50%;background:#2e844a}
+.console-score{font-size:39px;font-weight:850;color:var(--navy);margin:20px 0 2px}
+.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:15px}
+.mini{border:1px solid var(--line);padding:11px;border-radius:7px;background:#fbfcfd}
+.mini strong{display:block;color:var(--navy)}
+.kpi-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:18px 0}
+.kpi{padding:16px;background:#fff;border:1px solid var(--line);border-radius:8px}
+.kpi .value{font-size:23px;font-weight:850;color:var(--navy)}.kpi .label{font-size:12px;color:var(--muted)}
+.section{margin-top:28px}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:13px}.section-head p{max-width:700px;color:var(--muted);margin:0}
+.workspace{display:grid;grid-template-columns:1.25fr .75fr;gap:14px}
+.panel{padding:20px}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--line);overflow:auto}
+.tab{border:0;background:transparent;padding:11px 14px;color:#5d6a79;white-space:nowrap;border-bottom:3px solid transparent}
+.tab.active{color:var(--navy);font-weight:800;border-bottom-color:var(--blue)}
+.tab-panel{padding-top:17px}
+.demo{background:#f8fafc;border:1px solid var(--line);border-radius:8px;padding:15px}
+.chat-window{height:330px;overflow:auto;padding:10px;background:#fff;border:1px solid #dce2e8;border-radius:7px}
+.msg{max-width:82%;padding:10px 12px;border-radius:8px;margin:8px 0;white-space:pre-wrap}
+.msg.user{margin-left:auto;background:#e5f1fb;color:#153b60}.msg.ai{background:#f3f5f7;color:#263444}
+.msg.system{margin:10px auto;background:#fff7e6;border:1px solid #f3d79a;color:#6a4c08;font-size:12px}
+.input-row{display:flex;gap:8px;margin-top:10px}
+.input-row input{flex:1;border:1px solid #aeb8c4;border-radius:6px;padding:11px}
+.intent-card{border-left:4px solid var(--blue);background:#f5f9fd;padding:13px;border-radius:5px;margin-bottom:9px}
+.badge{display:inline-flex;padding:3px 7px;border-radius:999px;font-size:11px;font-weight:800;background:#e9f6ee;color:var(--green)}
+.badge.amber{background:#fff4dc;color:#8a5a00}.badge.red{background:#fee9ea;color:var(--red)}
+.table-wrap{overflow:auto}.data-table{width:100%;border-collapse:collapse}.data-table th,.data-table td{padding:11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.data-table th{font-size:11px;text-transform:uppercase;color:#687687;letter-spacing:.06em;background:#fafbfc}
+.progress{height:8px;background:#e6ebf0;border-radius:99px;overflow:hidden}.progress span{display:block;height:100%;background:var(--blue)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.step{padding:19px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.step-num{display:inline-grid;place-items:center;width:30px;height:30px;background:var(--navy);color:#fff;border-radius:50%;font-weight:800}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:12px}.node{padding:9px 12px;background:#fff;border:1px solid #b9c6d3;border-radius:7px;font-weight:750;color:#1d4c73}.arrow{color:#7a8796}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.feature{padding:18px}.feature p{color:var(--muted);margin:0}
+.signal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.signal{padding:13px;border:1px solid var(--line);border-radius:7px;background:#fbfcfd}
+.signal .big{font-size:25px;font-weight:850;color:var(--navy)}
+.action-list{display:grid;gap:9px}.action{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:13px;border:1px solid var(--line);border-radius:7px}
+.action button{padding:7px 10px;border:1px solid #b7c4d0;background:#fff;border-radius:5px}
+.notice{padding:12px 14px;background:#f1f7fd;border:1px solid #c8def1;border-radius:7px;color:#174d78}
+.lead-box{background:linear-gradient(120deg,#032d60,#075aa7);color:#fff;padding:28px;border-radius:10px;display:flex;justify-content:space-between;gap:25px;align-items:center}
+.lead-box h2{color:#fff}.lead-box p{color:#dbeafa}.lead-box .primary{background:#fff;color:var(--navy)}
+.footer{padding:35px 0 5px;color:#718091;font-size:12px;display:flex;justify-content:space-between;gap:20px}
+.modal{position:fixed;inset:0;background:rgba(3,20,42,.48);display:none;place-items:center;z-index:100;padding:18px}.modal.open{display:grid}
+.modal-card{width:min(720px,100%);background:#fff;border-radius:10px;box-shadow:0 20px 70px rgba(0,0,0,.25);padding:24px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field label{display:block;font-size:12px;font-weight:750;margin-bottom:5px}.field input,.field select,.field textarea{width:100%;border:1px solid #aeb8c4;border-radius:6px;padding:10px}.field.full{grid-column:1/-1}.close{float:right;border:0;background:transparent;font-size:22px}
+.toast{position:fixed;right:20px;bottom:20px;background:#032d60;color:#fff;padding:12px 16px;border-radius:7px;box-shadow:var(--shadow);display:none;z-index:120}.toast.show{display:block}
+@media(max-width:1100px){.shell{grid-template-columns:76px 1fr}.sidebar{padding:10px 6px}.side-title{display:none}.side-link{justify-content:center}.side-link span:not(.side-icon){display:none}.hero,.workspace{grid-template-columns:1fr}.kpi-strip{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.topbar{padding:0 10px}.global-search{display:none}.page{padding:16px}.breadcrumb{padding:10px 16px}.hero-main{padding:22px}h1{font-size:31px}.kpi-strip,.feature-grid,.steps{grid-template-columns:1fr 1fr}.signal-grid{grid-template-columns:1fr}.lead-box{flex-direction:column;align-items:flex-start}.footer{flex-direction:column}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
+@media(max-width:520px){.shell{grid-template-columns:1fr}.sidebar{display:none}.kpi-strip,.feature-grid,.steps{grid-template-columns:1fr}.top-actions .nav-btn{display:none}.page{padding:12px}.chat-window{height:290px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="#top" aria-label="OrionPulse home"><span class="logoMark">O</span> OrionPulse</a>
+  <div class="global-search"><span class="searchIcon">⌕</span><input id="globalSearch" placeholder="Search agents, products, conversations, intelligence..." aria-label="Search"></div>
+  <div class="top-actions">
+    <button class="nav-btn" onclick="scrollToId('how-it-works')">How It Works</button>
+    <button class="icon-btn" onclick="toast('Demo notifications: 3 intelligence events ready.')">◉</button>
+    <button class="icon-btn" onclick="openModal()">Get Proposal</button>
+  </div>
+</header>
+
+<div class="shell" id="top">
+<aside class="sidebar" aria-label="OrionPulse navigation">
+  <div class="side-title">AI Workforce</div>
+  <a class="side-link active" href="#overview"><span class="side-icon">⌂</span><span>Overview</span></a>
+  <a class="side-link" href="#workspace"><span class="side-icon">▣</span><span>Agent Workspace</span></a>
+  <a class="side-link" href="#product-intelligence"><span class="side-icon">◇</span><span>Product Intelligence</span></a>
+  <a class="side-link" href="#conversations"><span class="side-icon">◌</span><span>Conversations</span></a>
+  <a class="side-link" href="#opportunities"><span class="side-icon">↗</span><span>Opportunities</span></a>
+  <a class="side-link" href="#actions"><span class="side-icon">✓</span><span>Actions</span></a>
+  <div class="side-title">Intelligence</div>
+  <a class="side-link" href="#analytics"><span class="side-icon">▥</span><span>Analytics</span></a>
+  <a class="side-link" href="#reports"><span class="side-icon">▤</span><span>Reports</span></a>
+  <a class="side-link" href="#memory"><span class="side-icon">◈</span><span>Memory</span></a>
+  <div class="side-title">Workforce</div>
+  <a class="side-link" href="#handoffs"><span class="side-icon">⇄</span><span>Agent Handoffs</span></a>
+  <a class="side-link" href="#integrations"><span class="side-icon">⊕</span><span>Integrations</span></a>
+  <a class="side-link" href="#settings"><span class="side-icon">⚙</span><span>Settings</span></a>
+</aside>
+
+<main class="content">
+<div class="breadcrumb">OrionPulse / AI Workforce / Customer Support / Frontline Support / <strong>AI Product Information Agent</strong></div>
+<div class="page">
+
+<section class="hero" id="overview">
+  <div class="card hero-main">
+    <span class="eyebrow">FRONTLINE SUPPORT · PRODUCT INTELLIGENCE</span>
+    <h1>AI Product Information Agent</h1>
+    <p class="hero-copy"><strong>Your always-on product specialist.</strong> Give customers accurate, contextual product answers while turning every product question into structured customer intelligence, buying signals and next-best actions.</p>
+    <div class="pills">
+      <span class="pill">Knowledge Grounded</span><span class="pill">Intent Detection</span><span class="pill">Product Comparison</span><span class="pill">Lead Signals</span><span class="pill">Human Escalation</span><span class="pill">BI Ready</span>
+    </div>
+    <div class="cta-row">
+      <button class="primary" onclick="startAgent()">Start Agent</button>
+      <button class="secondary" onclick="scrollToId('how-it-works')">See How It Works</button>
+      <button class="secondary" onclick="openModal()">Build This For My Business</button>
+    </div>
+    <div class="notice" style="margin-top:18px"><strong>Demo Mode:</strong> all intelligence shown below is simulated for demonstration. Production answers must be grounded in authorized business knowledge and connected sources.</div>
+  </div>
+  <div class="card hero-console">
+    <div class="status-row"><span class="status"><span class="dot"></span> Agent Ready</span><span class="badge">Demo</span></div>
+    <div class="console-score" id="readiness">92%</div>
+    <div style="color:var(--muted)">Product Knowledge Readiness</div>
+    <div class="progress" style="margin-top:10px"><span style="width:92%"></span></div>
+    <div class="mini-grid">
+      <div class="mini"><strong>Grounding</strong>Catalog + KB</div>
+      <div class="mini"><strong>Confidence</strong>High</div>
+      <div class="mini"><strong>Escalation</strong>Enabled</div>
+      <div class="mini"><strong>Approval</strong>Required</div>
+    </div>
+    <div style="margin-top:15px;font-size:12px;color:var(--muted)">Precision is the new luxury.</div>
+  </div>
+</section>
+
+<section class="kpi-strip" aria-label="Agent KPI summary">
+  <div class="kpi"><div class="value" id="k1">94%</div><div class="label">Answer confidence</div></div>
+  <div class="kpi"><div class="value" id="k2">2.4s</div><div class="label">Demo response time</div></div>
+  <div class="kpi"><div class="value">31</div><div class="label">Product topics mapped</div></div>
+  <div class="kpi"><div class="value">8</div><div class="label">Opportunity signals</div></div>
+  <div class="kpi"><div class="value">24/7</div><div class="label">Monitoring model</div></div>
+</section>
+
+<section class="section" id="workspace">
+<div class="section-head"><div><span class="eyebrow">AGENT WORKSPACE</span><h2>Product intelligence command center</h2></div><p>One workspace for product knowledge, customer questions, evidence, buying signals and action orchestration.</p></div>
+<div class="card panel">
+<div class="tabs" role="tablist">
+<button class="tab active" onclick="tab(this,'tab-overview')">Intelligence Overview</button>
+<button class="tab" onclick="tab(this,'tab-findings')">Findings</button>
+<button class="tab" onclick="tab(this,'tab-evidence')">Evidence</button>
+<button class="tab" onclick="tab(this,'tab-opps')">Opportunities</button>
+<button class="tab" onclick="tab(this,'tab-risk')">Risks</button>
+</div>
+<div id="tab-overview" class="tab-panel">
+  <div class="signal-grid">
+    <div class="signal"><div class="eyebrow">PRIMARY INTENT</div><div class="big">Product fit</div><span class="badge">High confidence</span></div>
+    <div class="signal"><div class="eyebrow">CUSTOMER STAGE</div><div class="big">Evaluation</div><span class="badge">Buying signal</span></div>
+    <div class="signal"><div class="eyebrow">NEXT BEST ACTION</div><div class="big">Compare plans</div><span class="badge amber">Suggested</span></div>
+    <div class="signal"><div class="eyebrow">ESCALATION</div><div class="big">Not required</div><span class="badge">Self-service</span></div>
+  </div>
+</div>
+<div id="tab-findings" class="tab-panel" hidden>
+  <div class="intent-card"><strong>Finding:</strong> Product questions often contain latent purchase intent.<br><span style="color:var(--muted)">Why it matters:</span> A support-only response may miss a qualified opportunity.<br><b>Recommendation:</b> classify intent and route qualified signals to sales or CRM.</div>
+  <div class="intent-card"><strong>Finding:</strong> Comparison questions indicate evaluation-stage behavior.<br><b>Action:</b> provide approved comparison evidence and offer a guided next step.</div>
+</div>
+<div id="tab-evidence" class="tab-panel" hidden>
+  <div class="table-wrap"><table class="data-table"><thead><tr><th>Evidence</th><th>Source Type</th><th>Status</th><th>Confidence</th></tr></thead><tbody>
+  <tr><td>Approved product catalog</td><td>Internal knowledge</td><td><span class="badge">Verified</span></td><td>High</td></tr>
+  <tr><td>Product FAQ</td><td>Knowledge base</td><td><span class="badge">Verified</span></td><td>High</td></tr>
+  <tr><td>Live inventory</td><td>Commerce API</td><td><span class="badge amber">Integration required</span></td><td>Unknown</td></tr>
+  </tbody></table></div>
+</div>
+<div id="tab-opps" class="tab-panel" hidden>
+  <div class="intent-card"><strong>Opportunity:</strong> customer asks about premium plan features.<br><b>Potential action:</b> offer approved upgrade path → create CRM task → measure conversion.</div>
+</div>
+<div id="tab-risk" class="tab-panel" hidden>
+  <div class="intent-card" style="border-left-color:var(--red)"><strong>Risk:</strong> outdated product information can damage trust.<br><b>Control:</b> source freshness checks + confidence thresholds + human escalation.</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="product-intelligence">
+<div class="section-head"><div><span class="eyebrow">PRODUCT INTELLIGENCE</span><h2>One source of truth for product conversations</h2></div><p>The agent can be designed to understand catalog structure, features, specifications, compatibility, plans, pricing rules, availability, policies and approved claims.</p></div>
+<div class="feature-grid">
+  <div class="card feature"><h3>Product Knowledge Graph</h3><p>Map products → features → variants → use cases → compatibility → policies → evidence.</p></div>
+  <div class="card feature"><h3>Contextual Answers</h3><p>Use customer intent, business context and conversation history to choose the right answer.</p></div>
+  <div class="card feature"><h3>Comparison Intelligence</h3><p>Explain meaningful differences without inventing specifications or unsupported claims.</p></div>
+  <div class="card feature"><h3>Freshness Control</h3><p>Track source timestamps and flag information requiring verification before response.</p></div>
+  <div class="card feature"><h3>Buying Signal Detection</h3><p>Detect evaluation, upgrade, pricing, availability and purchase-readiness signals.</p></div>
+  <div class="card feature"><h3>Escalation Intelligence</h3><p>Route complex, sensitive or low-confidence questions to the right human or specialist agent.</p></div>
+</div>
+</section>
+
+<section class="section" id="conversations">
+<div class="section-head"><div><span class="eyebrow">INTERACTIVE DEMO</span><h2>Watch the digital product specialist reason</h2></div><p>Try a simulated conversation. The interface demonstrates the future workflow without pretending to call a live model.</p></div>
+<div class="workspace">
+<div class="card panel">
+  <div class="chat-window" id="chat">
+    <div class="msg system">SIMULATED SESSION · Product Information Agent · Grounding required before production answer.</div>
+    <div class="msg user">Which plan is best if I need automation and advanced reporting?</div>
+    <div class="msg ai">I can help compare those capabilities. In a production deployment I would first retrieve the approved plan matrix, confirm which automation and reporting features are current, then recommend the best-fit option.</div>
+    <div class="msg ai"><strong>Detected intent:</strong> Product comparison · <strong>Stage:</strong> Evaluation · <strong>Confidence:</strong> High</div>
+  </div>
+  <div class="input-row"><input id="chatInput" placeholder="Ask about a product, feature, plan or compatibility..." aria-label="Ask product question"><button class="primary" onclick="demoReply()">Analyze</button></div>
+</div>
+<div class="card panel">
+  <h3>Live intelligence trace</h3>
+  <div class="action-list" id="trace">
+    <div class="action"><span>Perception</span><span class="badge">Ready</span></div>
+    <div class="action"><span>Intent classification</span><span class="badge">Complete</span></div>
+    <div class="action"><span>Knowledge retrieval</span><span class="badge">Grounded</span></div>
+    <div class="action"><span>Decision</span><span class="badge amber">Reviewable</span></div>
+    <div class="action"><span>Action</span><span class="badge amber">Approval</span></div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="section" id="opportunities">
+<div class="section-head"><div><span class="eyebrow">GROWTH INTELLIGENCE</span><h2>Support conversations become growth signals</h2></div><p>Instead of stopping at an answer, the agent can identify what the business should do next.</p></div>
+<div class="card panel">
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Signal</th><th>Detected Context</th><th>Priority</th><th>Next Best Action</th><th>Status</th></tr></thead><tbody>
+<tr><td>Upgrade intent</td><td>Customer needs advanced capabilities</td><td>High</td><td>Create qualified CRM task</td><td><span class="badge amber">Approval</span></td></tr>
+<tr><td>Comparison intent</td><td>Evaluating two plans</td><td>Medium</td><td>Provide approved comparison</td><td><span class="badge">Suggested</span></td></tr>
+<tr><td>Availability question</td><td>Needs current stock / access</td><td>High</td><td>Query authorized integration</td><td><span class="badge amber">Integration</span></td></tr>
+<tr><td>Unresolved complexity</td><td>Low confidence answer</td><td>High</td><td>Escalate to specialist</td><td><span class="badge red">Human</span></td></tr>
+</tbody></table></div>
+</div>
+</section>
+
+<section class="section" id="actions">
+<div class="section-head"><div><span class="eyebrow">ACTION CENTER</span><h2>Insight without action is incomplete.</h2></div><p>Every recommendation can become a reviewable task, workflow or authorized execution.</p></div>
+<div class="card panel">
+<div class="action-list">
+<div class="action"><div><strong>Route qualified product-interest signal to CRM</strong><br><small>Suggested → Ready for Approval</small></div><button onclick="toast('Demo: action queued for human approval.')">Review</button></div>
+<div class="action"><div><strong>Update product knowledge freshness task</strong><br><small>Source verification required</small></div><button onclick="toast('Demo: verification task created.')">Assign</button></div>
+<div class="action"><div><strong>Generate product-question intelligence report</strong><br><small>Includes themes, risks and opportunities</small></div><button onclick="toast('Demo: report generation started.')">Generate</button></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="how-it-works">
+<div class="section-head"><div><span class="eyebrow">HOW IT WORKS</span><h2>From customer question to business intelligence.</h2></div><p>Designed as a digital employee: it perceives, grounds, reasons, decides, acts, remembers and learns.</p></div>
+<div class="steps">
+<div class="step"><span class="step-num">01</span><h3>Perceive</h3><p>Understand the question, product, customer intent, urgency and context.</p></div>
+<div class="step"><span class="step-num">02</span><h3>Ground</h3><p>Retrieve approved product knowledge and separate facts, evidence and unknowns.</p></div>
+<div class="step"><span class="step-num">03</span><h3>Reason</h3><p>Compare options, identify fit, confidence, risks and the next-best response.</p></div>
+<div class="step"><span class="step-num">04</span><h3>Act & Learn</h3><p>Answer, escalate, create tasks, capture signals and feed outcomes to the workforce.</p></div>
+</div>
+<div class="card panel" style="margin-top:12px"><div class="flow">
+<span class="node">Question</span><span class="arrow">→</span><span class="node">Intent</span><span class="arrow">→</span><span class="node">Knowledge</span><span class="arrow">→</span><span class="node">Reasoning</span><span class="arrow">→</span><span class="node">Answer / Action</span><span class="arrow">→</span><span class="node">CRM / BI</span><span class="arrow">→</span><span class="node">Learning</span>
+</div></div>
+</section>
+
+<section class="section" id="analytics">
+<div class="section-head"><div><span class="eyebrow">BUSINESS INTELLIGENCE</span><h2>Signals ready for the OrionPulse central dashboard</h2></div><p>Structured events are designed for future Supabase/PostgreSQL storage and cross-agent intelligence.</p></div>
+<div class="card panel">
+<div class="signal-grid">
+<div class="signal"><div class="eyebrow">TOP QUESTION THEME</div><div class="big">Product fit</div><p style="color:var(--muted)">Track demand by product, segment and customer stage.</p></div>
+<div class="signal"><div class="eyebrow">OPPORTUNITY RATE</div><div class="big">Signal-based</div><p style="color:var(--muted)">Measure qualified product-interest conversations.</p></div>
+<div class="signal"><div class="eyebrow">KNOWLEDGE HEALTH</div><div class="big">92%</div><p style="color:var(--muted)">Freshness, coverage and source confidence.</p></div>
+<div class="signal"><div class="eyebrow">ESCALATION QUALITY</div><div class="big">Monitored</div><p style="color:var(--muted)">Track why humans are needed and improve the knowledge layer.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="handoffs">
+<div class="section-head"><div><span class="eyebrow">AI WORKFORCE</span><h2>Built to hand work to the right specialist</h2></div><p>The Product Information Agent is one worker inside the larger OrionPulse operating system.</p></div>
+<div class="card panel">
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Handoff</th><th>When</th><th>Context Passed</th><th>Destination</th></tr></thead><tbody>
+<tr><td>Qualified product interest</td><td>Purchase intent detected</td><td>Intent, product, evidence, confidence</td><td>Lead Qualification / CRM</td></tr>
+<tr><td>Complex technical question</td><td>Low confidence or specialist topic</td><td>Conversation + unresolved question</td><td>Technical Support Agent</td></tr>
+<tr><td>Customer feedback pattern</td><td>Repeated issue/theme</td><td>Theme + evidence + frequency</td><td>Customer Feedback Agent</td></tr>
+<tr><td>Growth opportunity</td><td>High-value pattern</td><td>Business context + recommendation</td><td>Growth Intelligence / Reporting</td></tr>
+</tbody></table></div>
+</div>
+</section>
+
+<section class="section" id="memory">
+<div class="section-head"><div><span class="eyebrow">MEMORY & GOVERNANCE</span><h2>Persistent intelligence without losing control</h2></div><p>Production memory should be scoped, permissioned and auditable.</p></div>
+<div class="feature-grid">
+<div class="card feature"><h3>Business Memory</h3><p>Approved product rules, policies, terminology, customer segments and operating context.</p></div>
+<div class="card feature"><h3>Conversation Memory</h3><p>Relevant context only, retained according to configured privacy and retention rules.</p></div>
+<div class="card feature"><h3>Learning Memory</h3><p>Outcome signals and correction patterns used to improve future workflows.</p></div>
+</div>
+</section>
+
+<section class="section" id="integrations">
+<div class="section-head"><div><span class="eyebrow">INTEGRATIONS</span><h2>Connect the business knowledge layer</h2></div><p>Demo connectors are intentionally inactive. Production connections require authorized authentication.</p></div>
+<div class="feature-grid">
+<div class="card feature"><h3>Supabase / PostgreSQL</h3><p>Business, product, customer, task, event and intelligence records.</p><button class="secondary" style="margin-top:12px" onclick="toast('Demo: integration setup would open securely.')">Connect</button></div>
+<div class="card feature"><h3>Knowledge / RAG</h3><p>pgvector-backed product documents, FAQs, manuals and approved content.</p><button class="secondary" style="margin-top:12px" onclick="toast('Demo: knowledge source connector.')">Configure</button></div>
+<div class="card feature"><h3>CRM / Commerce</h3><p>Authorized product, customer, opportunity and workflow data.</p><button class="secondary" style="margin-top:12px" onclick="toast('Demo: CRM connector.')">Connect</button></div>
+</div>
+</section>
+
+<section class="section" id="reports">
+<div class="section-head"><div><span class="eyebrow">REPORTING</span><h2>Product questions → executive intelligence</h2></div><p>Reports can roll up from conversation-level signals into business-level trends.</p></div>
+<div class="card panel">
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Report</th><th>Output</th><th>Cadence</th><th>Audience</th><th>Status</th></tr></thead><tbody>
+<tr><td>Product Demand Intelligence</td><td>Top questions, products, features and segments</td><td>Weekly</td><td>Leadership</td><td><span class="badge">Ready</span></td></tr>
+<tr><td>Knowledge Health</td><td>Coverage, freshness, unknowns and escalations</td><td>Daily</td><td>Support / Ops</td><td><span class="badge">Ready</span></td></tr>
+<tr><td>Product Opportunity Report</td><td>Buying signals and recommended follow-ups</td><td>Daily</td><td>Sales / Growth</td><td><span class="badge amber">Demo</span></td></tr>
+</tbody></table></div>
+</div>
+</section>
+
+<section class="section" id="settings">
+<div class="section-head"><div><span class="eyebrow">ARCHITECTURE</span><h2>Ready for the OrionPulse backend</h2></div><p>GitHub Pages uses Demo Mode. Production can connect through secure server-side APIs without exposing credentials.</p></div>
+<div class="card panel">
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Layer</th><th>Planned Technology</th><th>Purpose</th></tr></thead><tbody>
+<tr><td>Frontend</td><td>HTML / CSS / JavaScript</td><td>Responsive agent workspace</td></tr>
+<tr><td>AI</td><td>Google Gemini</td><td>Reasoning, extraction, classification and response generation</td></tr>
+<tr><td>Database</td><td>Supabase / PostgreSQL</td><td>Business and operational intelligence</td></tr>
+<tr><td>RAG</td><td>pgvector</td><td>Grounded product knowledge retrieval</td></tr>
+<tr><td>Orchestration</td><td>LangGraph-compatible workflows</td><td>Stateful agent execution and handoffs</td></tr>
+<tr><td>Secure API</td><td>Node.js</td><td>Secrets, tools, integrations and authorization</td></tr>
+</tbody></table></div>
+<div class="notice" style="margin-top:14px"><strong>Secure endpoints:</strong> /api/agent/analyze · /api/agent/run · /api/agent/action · /api/agent/status · /api/agent/memory · /api/agent/report</div>
+</div>
+</section>
+
+<section class="section">
+<div class="lead-box">
+<div><span class="eyebrow" style="color:#9fd1ff">BUILD YOUR AI WORKFORCE</span><h2>Turn product support into a growth system.</h2><p>OrionPulse can design, connect and manage a specialized AI workforce around your business — from frontline support to CRM, marketing, automation and intelligence.</p></div>
+<div class="cta-row"><button class="primary" onclick="openModal()">Get a Custom Proposal</button><a class="primary" href="https://wa.me/919862903690?text=Hi%20OrionPulse%2C%20I%27m%20interested%20in%20an%20AI%20Product%20Information%20Agent." target="_blank" rel="noopener">Talk on WhatsApp</a></div>
+</div>
+</section>
+
+<footer class="footer">
+<div>© 2026 OrionPulse Technologies OPC Private Limited · Precision is the new luxury.</div>
+<div>service@orionpulse.co.in · +91 98629 03690</div>
+</footer>
+</div>
+</main>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<div class="modal-card">
+<button class="close" onclick="closeModal()" aria-label="Close">×</button>
+<span class="eyebrow">ORIONPULSE</span><h2 id="modalTitle">Build an AI Product Information Agent</h2>
+<p style="color:var(--muted)">Tell us what your business needs. This static prototype prepares the lead; production submissions should be processed by a secure backend.</p>
+<form id="leadForm" onsubmit="submitLead(event)">
+<div class="form-grid">
+<div class="field"><label>Business name</label><input name="business" required></div>
+<div class="field"><label>Website</label><input name="website" placeholder="https://"></div>
+<div class="field"><label>Industry</label><input name="industry"></div>
+<div class="field"><label>Primary goal</label><select name="goal"><option>Improve product support</option><option>Increase qualified leads</option><option>Reduce repetitive support</option><option>Build an AI workforce</option></select></div>
+<div class="field full"><label>What would you like the agent to do?</label><textarea name="need" rows="4" required></textarea></div>
+</div>
+<div class="cta-row"><button class="primary" type="submit">Send Request</button><button class="secondary" type="button" onclick="closeModal()">Cancel</button></div>
+</form>
+</div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const API={
+ analyze:"/api/agent/analyze",run:"/api/agent/run",action:"/api/agent/action",
+ status:"/api/agent/status",memory:"/api/agent/memory",report:"/api/agent/report"
+};
+const demoData={
+ agent_id:"orionpulse.ai-product-information.v1",
+ task_id:"demo-task-001",
+ business_id:"demo-business",
+ confidence:.94,
+ status:"demo",
+ timestamp:new Date().toISOString()
+};
+function scrollToId(id){document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"})}
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2600)}
+function openModal(){document.getElementById("modal").classList.add("open");setTimeout(()=>document.querySelector('#leadForm input[name="business"]')?.focus(),50)}
+function closeModal(){document.getElementById("modal").classList.remove("open")}
+function startAgent(){scrollToId("conversations");toast("Agent started in Demo Mode.")}
+function tab(btn,id){
+ document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));btn.classList.add("active");
+ document.querySelectorAll(".tab-panel").forEach(x=>x.hidden=true);document.getElementById(id).hidden=false;
+}
+function demoReply(){
+ const input=document.getElementById("chatInput"),q=input.value.trim();if(!q){toast("Enter a product question first.");return}
+ const chat=document.getElementById("chat");
+ chat.insertAdjacentHTML("beforeend",`<div class="msg user"></div>`);
+ chat.lastElementChild.textContent=q;
+ const states=["Analyzing intent…","Retrieving approved product knowledge…","Checking evidence and unknowns…","Preparing next-best response…"];
+ let i=0;const sys=document.createElement("div");sys.className="msg system";chat.appendChild(sys);
+ const timer=setInterval(()=>{sys.textContent=states[i++]||"Demo reasoning complete.";chat.scrollTop=chat.scrollHeight;if(i>states.length){clearInterval(timer);const ai=document.createElement("div");ai.className="msg ai";ai.innerHTML="<strong>Demo result:</strong> The agent would ground its answer in authorized product data, state confidence, identify any missing information and recommend a next-best action. <strong>Potential signal:</strong> product-interest intent.";chat.appendChild(ai);document.getElementById("k1").textContent="96%";}},550);
+ input.value="";
+}
+function submitLead(e){
+ e.preventDefault();const f=new FormData(e.target);const lead=Object.fromEntries(f.entries());
+ console.log("Demo lead event",{event:"lead_created",lead,agent_id:demoData.agent_id});
+ closeModal();e.target.reset();toast("Demo request captured. Connect a secure backend to send it to OrionPulse.");
+}
+document.getElementById("globalSearch").addEventListener("keydown",e=>{
+ if(e.key==="Enter"){toast("Demo search: "+e.target.value);e.target.select()}
+});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+window.addEventListener("load",()=>console.log("OrionPulse Agent Demo",{
+ event:"agent_started",...demoData,
+ analytics:["onboarding_completed","analysis_started","analysis_completed","recommendation_generated","action_approved","action_executed","report_generated","workflow_created","agent_handoff","lead_created","integration_connected"]
+}));
+</script>
+</body>
+</html>
